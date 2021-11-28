@@ -1,7 +1,7 @@
 module.exports = {
   integrations: {
-    <% INTEGRATION %>: {
-      location: '@vue-storefront/<% INTEGRATION %>-api/server',
+    vsf-mock-integration: {
+      location: '@vue-storefront/vsf-mock-integration-api/server',
       configuration: {}
     }
   }

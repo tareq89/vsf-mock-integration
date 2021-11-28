@@ -1,8 +1,11 @@
 import { ReviewGetters, AgnosticRateCount } from '@vue-storefront/core';
-import type { Review, ReviewItem } from '@vue-storefront/<% INTEGRATION %>-api';
+import type {
+  Review,
+  ReviewItem,
+} from '@vue-storefront/vsf-mock-integration-api';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getItems (review: Review): ReviewItem[] {
+function getItems(review: Review): ReviewItem[] {
   return [];
 }
 
@@ -61,5 +64,5 @@ export const reviewGetters: ReviewGetters<Review, ReviewItem> = {
   getTotalReviews,
   getAverageRating,
   getRatesCount,
-  getReviewsPage
+  getReviewsPage,
 };

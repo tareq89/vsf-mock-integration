@@ -2,9 +2,12 @@ import {
   WishlistGetters,
   AgnosticAttribute,
   AgnosticPrice,
-  AgnosticTotals
+  AgnosticTotals,
 } from '@vue-storefront/core';
-import type { Wishlist, WishlistItem } from '@vue-storefront/<% INTEGRATION %>-api';
+import type {
+  Wishlist,
+  WishlistItem,
+} from '@vue-storefront/vsf-mock-integration-api';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getItems(wishlist: Wishlist): WishlistItem[] {
@@ -15,7 +18,7 @@ function getItems(wishlist: Wishlist): WishlistItem[] {
 function getTotals(wishlist: Wishlist): AgnosticTotals {
   return {
     total: 10,
-    subtotal: 10
+    subtotal: 10,
   };
 }
 
@@ -33,7 +36,7 @@ function getItemImage(item: WishlistItem): string {
 function getItemPrice(item: WishlistItem): AgnosticPrice {
   return {
     regular: 12,
-    special: 10
+    special: 10,
   };
 }
 
@@ -43,9 +46,12 @@ function getItemQty(item: WishlistItem): number {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getItemAttributes(item: WishlistItem, filters?: string[]): Record<string, AgnosticAttribute | string> {
+function getItemAttributes(
+  item: WishlistItem,
+  filters?: string[]
+): Record<string, AgnosticAttribute | string> {
   return {
-    color: 'red'
+    color: 'red',
   };
 }
 
@@ -80,5 +86,5 @@ export const wishlistGetters: WishlistGetters<Wishlist, WishlistItem> = {
   getShippingPrice,
   getItemSku,
   getTotalItems,
-  getFormattedPrice
+  getFormattedPrice,
 };
